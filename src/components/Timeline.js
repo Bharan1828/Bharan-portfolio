@@ -52,7 +52,7 @@ const Timeline = () => {
             <p className="mt-3 text-sm font-semibold">2022 – 2026</p>
             <div className="mt-3">
               <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-medium text-blue-950">
-                CGPA: 7.9/10
+                CGPA: 8/10
               </span>
             </div>
           </div>
