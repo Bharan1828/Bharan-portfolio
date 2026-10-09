@@ -16,7 +16,10 @@ Email: ${email.current.value}
 Message:
 ${message.current.value}`;
 
-    window.location.href = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=YOUR_EMAIL@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+      "_blank",
+    );
   };
 
   return (
