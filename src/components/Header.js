@@ -4,6 +4,7 @@ import profilePhoto from "../assests/Profile_pic.png";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showPhoto, setshowPhoto] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,49 +17,59 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const scrollToSection = (id) => {
-    document.getElementById(id).scrollIntoView({
+    document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
     });
+    setMenuOpen(false);
   };
 
   return (
     <div
-      className={`fixed top-0 left-0 z-50 w-full flex justify-between
-    ${scrolled ? "px-8 mt-4" : "px-16 pt-4 pb-2"}`}
+      className={`fixed top-0 left-0 z-50 flex w-full items-center justify-between gap-3 transition-all duration-300 ${
+        scrolled ? "px-4 pt-3 sm:px-8" : "px-4 pt-4 sm:px-8 md:px-16"
+      }`}
     >
       <div
-        className={`${
-          scrolled ? "bg-amber-100 rounded-full px-6 py-2 shadow-md" : ""
+        className={`relative shrink-0 ${
+          scrolled
+            ? "rounded-full bg-amber-100 px-3 py-2 shadow-md sm:px-6"
+            : ""
         }`}
       >
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <img
             src={profilePhoto}
             alt="Me"
-            className="w-10 h-10 rounded-full object-cover cursor-pointer"
+            className="h-9 w-9 cursor-pointer rounded-full object-cover sm:h-10 sm:w-10"
             onMouseEnter={() => setshowPhoto(true)}
             onMouseLeave={() => setshowPhoto(false)}
+            onClick={() => setshowPhoto(!showPhoto)}
           />
+
           {showPhoto && (
             <img
               src={profilePhoto}
               alt="Profile"
-              className="absolute w-64 h-64 top-14 left-14 rounded-full object-cover shadow-xl border-4 border-amber-100"
+              className="absolute left-0 top-12 z-50 h-40 w-40 rounded-full border-4 border-amber-100 object-cover shadow-xl sm:left-14 sm:top-14 sm:h-64 sm:w-64"
               onMouseEnter={() => setshowPhoto(true)}
               onMouseLeave={() => setshowPhoto(false)}
             />
           )}
 
-          <h1 className="text-lg font-semibold text-blue-950">
+          <h1 className="whitespace-nowrap text-sm font-semibold text-blue-950 sm:text-lg">
             Bharan Kommula
           </h1>
         </div>
       </div>
 
       <div
-        className={`flex gap-12 text-lg font-semibold text-blue-950
-      ${scrolled ? "bg-amber-100 rounded-full px-6 py-2 shadow-md" : ""}`}
+        className={`hidden items-center gap-5 text-sm font-semibold text-blue-950 lg:flex xl:gap-10 xl:text-lg ${
+          scrolled
+            ? "rounded-full bg-amber-100 px-5 py-3 shadow-md xl:px-6"
+            : ""
+        }`}
       >
         <button onClick={() => scrollToSection("About")}>About</button>
         <button onClick={() => scrollToSection("Skills")}>Skills</button>
@@ -68,6 +79,50 @@ const Header = () => {
         </button>
         <button onClick={() => scrollToSection("Contact")}>Contact</button>
       </div>
+
+      <button
+        className="rounded-full bg-amber-100 px-4 py-2 text-sm font-semibold text-blue-950 shadow-md lg:hidden"
+        onClick={() => setMenuOpen(!menuOpen)}
+        aria-label="Toggle navigation menu"
+        aria-expanded={menuOpen}
+      >
+        {menuOpen ? "Close ✕" : "Menu ☰"}
+      </button>
+
+      {menuOpen && (
+        <div className="absolute right-4 top-full mt-3 flex min-w-40 flex-col gap-1 rounded-2xl bg-amber-100 p-3 text-sm font-semibold text-blue-950 shadow-lg sm:right-8">
+          <button
+            className="rounded-xl px-4 py-3 text-left hover:bg-amber-200"
+            onClick={() => scrollToSection("About")}
+          >
+            About
+          </button>
+          <button
+            className="rounded-xl px-4 py-3 text-left hover:bg-amber-200"
+            onClick={() => scrollToSection("Skills")}
+          >
+            Skills
+          </button>
+          <button
+            className="rounded-xl px-4 py-3 text-left hover:bg-amber-200"
+            onClick={() => scrollToSection("Projects")}
+          >
+            Projects
+          </button>
+          <button
+            className="rounded-xl px-4 py-3 text-left hover:bg-amber-200"
+            onClick={() => scrollToSection("Experience")}
+          >
+            Experience
+          </button>
+          <button
+            className="rounded-xl px-4 py-3 text-left hover:bg-amber-200"
+            onClick={() => scrollToSection("Contact")}
+          >
+            Contact
+          </button>
+        </div>
+      )}
     </div>
   );
 };
