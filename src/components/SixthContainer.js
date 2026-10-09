@@ -17,7 +17,7 @@ Message:
 ${message.current.value}`;
 
     window.open(
-      `https://mail.google.com/mail/?view=cm&fs=1&to=YOUR_EMAIL@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+      `https://mail.google.com/mail/?view=cm&fs=1&to=bharankommula18@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
       "_blank",
     );
   };
