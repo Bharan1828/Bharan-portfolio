@@ -1,216 +1,185 @@
 const ThirdContainer = () => {
   return (
-    <section id="Skills" className="min-h-screen bg-indigo-200 pb-20">
-      {/* Heading */}
-      <div className="pt-24 ml-16">
-        <p className="text-gray-400 mb-6">02 ──── SKILLS</p>
+    <section
+      id="Skills"
+      className="min-h-screen bg-indigo-200 px-5 pb-16 sm:px-8 sm:pb-20 lg:px-12"
+    >
+      <div className="px-0 pt-20 sm:pt-24 lg:ml-4">
+        <p className="mb-5 text-sm text-gray-500 sm:mb-6">02 ──── SKILLS</p>
 
-        <h1 className="text-5xl text-blue-950 font-bold">Skills</h1>
+        <h1 className="text-4xl font-bold text-blue-950 sm:text-5xl">Skills</h1>
 
-        <h1 className="text-2xl text-blue-950 font-semibold pt-4">
+        <h2 className="pt-4 text-xl font-semibold text-blue-950 sm:text-2xl">
           Technologies I Worked With
-        </h1>
+        </h2>
       </div>
 
-      {/* Skill Cards */}
-      <div className="flex gap-8 ml-16 mt-20">
-        {/* FRONTEND */}
-        <div
-          className="relative w-72 h-72 bg-blue-100 shadow-lg rounded-lg
-                        hover:-translate-y-2 hover:shadow-2xl
-                        transition-all duration-300"
-        >
-          <h1 className="pt-6 text-center font-semibold text-blue-950">
+      <div className="mt-10 grid grid-cols-1 justify-items-center gap-6 sm:mt-14 sm:grid-cols-2 sm:gap-8 lg:ml-4 lg:mt-20 lg:grid-cols-2 xl:grid-cols-4">
+        <div className="h-72 w-full max-w-80 rounded-lg bg-blue-100 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h2 className="pt-6 text-center font-semibold text-blue-950">
             FRONTEND
-          </h1>
+          </h2>
 
-          <hr className="w-40 mx-auto mt-2 border-blue-950 border-t-2" />
+          <hr className="mx-auto mt-2 w-40 border-t-2 border-blue-950" />
 
-          <div className="mt-5 px-8 space-y-3">
+          <div className="mt-5 space-y-3 px-8">
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                alt="icon"
-                className="w-7 h-7"
+                alt="React"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">React.js</span>
+              <span className="font-medium text-blue-950">React.js</span>
             </div>
 
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                alt="icon2"
-                className="w-7 h-7"
+                alt="JavaScript"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">JavaScript</span>
+              <span className="font-medium text-blue-950">JavaScript</span>
             </div>
 
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                alt="icon3"
-                className="w-7 h-7"
+                alt="HTML"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">HTML</span>
+              <span className="font-medium text-blue-950">HTML</span>
             </div>
 
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                alt="icon4"
-                className="w-7 h-7"
+                alt="Tailwind CSS"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">Tailwind CSS</span>
+              <span className="font-medium text-blue-950">Tailwind CSS</span>
             </div>
           </div>
         </div>
 
-        {/* BACKEND */}
-        <div
-          className="relative w-72 h-72 bg-blue-100 shadow-lg rounded-lg
-                        hover:-translate-y-2 hover:shadow-2xl
-                        transition-all duration-300"
-        >
-          <h1 className="pt-6 text-center font-semibold text-blue-950">
+        <div className="h-72 w-full max-w-80 rounded-lg bg-blue-100 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h2 className="pt-6 text-center font-semibold text-blue-950">
             BACKEND
-          </h1>
+          </h2>
 
-          <hr className="w-40 mx-auto mt-2 border-blue-950 border-t-2" />
+          <hr className="mx-auto mt-2 w-40 border-t-2 border-blue-950" />
 
-          <div className="mt-5 px-10 space-y-3">
+          <div className="mt-5 space-y-3 px-10">
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                alt="bicon"
-                className="w-7 h-7"
+                alt="Java"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">Java</span>
+              <span className="font-medium text-blue-950">Java</span>
             </div>
 
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-                alt="bicon2"
-                className="w-7 h-7"
+                alt="Spring Boot"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">Spring Boot</span>
+              <span className="font-medium text-blue-950">Spring Boot</span>
             </div>
 
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original.svg"
-                alt="bicon3"
-                className="w-7 h-7"
+                alt="Hibernate"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">Hibernate</span>
+              <span className="font-medium text-blue-950">Hibernate</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <span
-                className="w-7 h-7 flex items-center justify-center
-                               bg-blue-950 text-white rounded text-xs font-bold"
-              >
+              <span className="flex h-7 w-7 items-center justify-center rounded bg-blue-950 text-xs font-bold text-white">
                 API
               </span>
-
-              <span className="text-blue-950 font-medium">REST APIs</span>
+              <span className="font-medium text-blue-950">REST APIs</span>
             </div>
           </div>
         </div>
 
-        {/* DATABASE */}
-        <div
-          className="relative w-72 h-72 px-4 bg-blue-100 shadow-lg rounded-lg
-                        hover:-translate-y-2 hover:shadow-2xl
-                        transition-all duration-300"
-        >
-          <h1 className="pt-6 text-center font-semibold text-blue-950">
+        <div className="h-72 w-full max-w-80 rounded-lg bg-blue-100 px-4 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h2 className="pt-6 text-center font-semibold text-blue-950">
             DATABASE
-          </h1>
+          </h2>
 
-          <hr className="w-40 mx-auto mt-2 border-blue-950 border-t-2" />
+          <hr className="mx-auto mt-2 w-40 border-t-2 border-blue-950" />
 
-          <div className="mt-5 px-8 space-y-3">
+          <div className="mt-5 space-y-3 px-4 sm:px-8">
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                alt="dicon"
-                className="w-7 h-7"
+                alt="MySQL"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">MySQL</span>
+              <span className="font-medium text-blue-950">MySQL</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <div
-                className="w-7 h-7 flex items-center justify-center
-                              bg-blue-950 text-white rounded text-xs font-bold"
-              >
+              <span className="flex h-7 w-7 items-center justify-center rounded bg-blue-950 text-xs font-bold text-white">
                 SQL
-              </div>
-
-              <span className="text-blue-950 font-medium">SQL</span>
+              </span>
+              <span className="font-medium text-blue-950">SQL</span>
             </div>
           </div>
         </div>
 
-        {/* TOOLS */}
-        <div
-          className="relative w-72 h-72 bg-blue-100 shadow-lg rounded-lg
-                        hover:-translate-y-2 hover:shadow-2xl
-                        transition-all duration-300"
-        >
-          <h1 className="pt-6 text-center font-semibold text-blue-950">
+        <div className="min-h-72 w-full max-w-80 rounded-lg bg-blue-100 pb-5 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+          <h2 className="pt-6 text-center font-semibold text-blue-950">
             TOOLS
-          </h1>
+          </h2>
 
-          <hr className="w-40 mx-auto mt-2 border-blue-950 border-t-2" />
+          <hr className="mx-auto mt-2 w-40 border-t-2 border-blue-950" />
 
-          <div className="mt-5 px-10 space-y-3">
+          <div className="mt-5 space-y-3 px-8">
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                alt="ticon"
-                className="w-7 h-7"
+                alt="Git"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">Git</span>
+              <span className="font-medium text-blue-950">Git</span>
             </div>
 
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                alt="ticon2"
-                className="w-7 h-7"
+                alt="GitHub"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">GitHub</span>
+              <span className="font-medium text-blue-950">GitHub</span>
             </div>
 
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
-                alt="ticon3"
-                className="w-7 h-7"
+                alt="Postman"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">Postman</span>
+              <span className="font-medium text-blue-950">Postman</span>
             </div>
 
             <div className="flex items-center gap-3">
               <img
                 src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                alt="ticon4"
-                className="w-7 h-7"
+                alt="VS Code"
+                className="h-7 w-7"
               />
-              <span className="text-blue-950 font-medium">VS Code</span>
+              <span className="font-medium text-blue-950">VS Code</span>
             </div>
 
             <div className="flex items-center gap-3">
-              <div
-                className="w-7 h-7 flex items-center justify-center
-                              bg-green-600 text-white rounded text-xs font-bold"
-              >
+              <span className="flex h-7 w-7 items-center justify-center rounded bg-green-600 text-xs font-bold text-white">
                 STS
-              </div>
-
-              <span className="text-blue-950 font-medium">
+              </span>
+              <span className="font-medium text-blue-950">
                 Spring Tool Suite
               </span>
             </div>
