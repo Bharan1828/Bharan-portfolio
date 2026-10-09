@@ -55,7 +55,7 @@ ${message.current.value}`;
 
               <div className="mt-10 space-y-5">
                 <a
-                  href="mailto:your-email@example.com"
+                  href="mailto:bharankommula18@example.com"
                   className="flex items-center gap-4 rounded-xl border border-white/15 p-4 transition hover:bg-white/10"
                 >
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-2xl">
@@ -65,7 +65,7 @@ ${message.current.value}`;
                   <div>
                     <p className="text-sm text-blue-200">Email Me</p>
                     <p className="break-all font-medium">
-                      your-email@example.com
+                      bharankommula18@gmail.com
                     </p>
                   </div>
                 </a>
